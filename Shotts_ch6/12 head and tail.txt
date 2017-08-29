@@ -1,0 +1,52 @@
+[Title Screen: Command Line Basics: head and tail]
+
+Let's take a look at command line basics: head and tail.
+
+head and tail are commands that print the first and last parts of a file, respectively. By default, head prints the first ten lines of a file, and tail prints the last ten lines.
+
+Let's take a look at their man pages.
+
+[Type man head ENTER]
+[Press q to exit man]
+[Type man tail ENTER]
+[Press q to exit man]
+
+Let's create a text file and use head and tail to examine its first and last lines.
+
+[Type ls /usr/bin | sort > foo.txt ENTER]
+
+We can observe that foo.txt now contains a sorted list of the files in /usr/bin
+
+[less foo.txt]
+
+We can use head to display the first ten lines of the file.
+
+[head foo.txt]
+
+We can use tail to display the last ten lines of the file.
+
+[Type tail foo.txt ENTER]
+
+To view a different number of lines, say the first or last *five* lines of a file, use the -n option with head and tail.
+
+[Type head -n 5 foo.txt]
+[Highlight -n 5]
+[Press ENTER]
+
+These are the first five lines of foo.txt.
+
+[Type tail -n 5 foo.txt ENTER]
+
+And these are the last five lines of foo.txt.
+
+head and tail can be used in pipelines.
+
+Let's list the last seven items of the contents of the directory /usr/bin. To do this, use ls to list the contents of the directory /usr/bin,
+
+[Type ls /usr/bin | sort]
+
+and pipe the output to tail with the appropriate options.
+
+[Continue to type | tail -n 7 ENTER]
+
+These are the last seven items in the directory /usr/bin.

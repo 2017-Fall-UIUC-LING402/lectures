@@ -1,0 +1,61 @@
+[Title Screen: Command Line Basics: Redirecting both standard output and standard error]
+
+Let's take a look at command line basics: redirecting both standard output and standard error.
+
+Let's begin with a command that prints to both standard output and to standard error.
+
+[Type ls /etc/X11 /XYZ]
+
+In this command, ls is instructed to output a list of the contents of two directories, /etc/X11, and /XYZ.
+
+[Highlight /etc/X11 /XYZ in the command]
+
+Directory /etc/X11 exists,
+
+[Highlight /etc/X11 in the command]
+
+and ls therefore prints a list of its contents to the standard output stream, which by default is attached to the screen
+
+[Highlight listing of /etc/X11]
+
+On the other hand, directory /XYZ does not exist,
+
+[Highlight /XYZ in the command]
+
+ls therefore prints an error message to the standard error stream, which is also attached to the screen.
+
+[Highlight error message]
+
+Using the output redirection operator and the error redirection operator, we can redirect standard output to one file and redirect standard error to a different file.
+
+[Type ls /etc/X11 /XYZ > foo.txt 2> bar.txt]
+
+We can examine the content of foo.txt and observe results of the ls command that were printed to the standard output stream.
+
+Likewise, we can examine the content of bar.txt and observe the error message of the ls command that was printed to the standard error stream.
+
+Sometimes, it can be useful to redirect the standard output and standard error streams of a command to a single file. This can be useful if we wish to capture all of the output of a command.
+
+To redirect both standard output and standard error from one ls command into the same file,
+
+[Type ls /etc/X11 /XYZ &> baz.txt]
+
+we can use the redirection operator &>
+
+[Type less baz.txt]
+
+Observe that the file baz.txt now contains all results of the ls command, both from standard output and from standard error.
+
+We can also use the double left angled brackets redirection operator to append standard output and standard error of a command to a single file.
+
+[Type ls /etc/X11 /XYZ &>> baz.txt]
+[Highlight &>>]
+[Press ENTER]
+
+Let's examine the file bar.txt with less.
+
+[Type less bar.txt ENTER]
+
+The file bar.txt has been appended with the error message from ls /etc/X11 and the output of ls /etc/X11.
+
+[Press q to exit less]

@@ -1,0 +1,66 @@
+[Title Screen: Command Line Basics: Redirecting standard error]
+
+Let's take a look at command line basics: redirecting standard error.
+
+By default, the output redirection operators
+
+[Type > >>]
+
+only redirect standard output. They do not redirect standard error.
+
+Let's try a command that produces an error and redirects its standard output.
+
+[Delete > >>]
+[Type ls -l /XYZ > foo.txt]
+
+The directory /XYZ
+
+[Highlight /XYZ in the command]
+
+does not exist.
+
+Execute this command,
+
+[Press ENTER]
+
+and an error message is displayed on the screen.
+
+[Highlight 'No such file or directory in the error message]
+
+Let's examine the file foo.txt with less.
+
+[Type less foo.txt ENTER]
+
+The file foo.txt does not contain the error message we just saw. 
+
+[Press q to exit less]
+
+This is because error messages are not sent to standard output, but to standard error. And the output redirection operator we used in the command
+
+[Highlight > in the previous command]
+
+only redirects standard output to the file foo.txt.
+
+To redirect standard error of a command, 
+
+[Type ls -l /XYZ]
+
+we use a numeral file descriptor, 2, immediately before the redirection operator.
+
+[Continue to type 2>]
+
+Standard input, standard output and standard errors are all special files. Each of them has a numeral file descriptor. The file descriptor of standard input is 0, standard output, 1, and standard error, 2.
+
+[Highlight 2 in the command]
+
+Now let's try redirecting the standard error of ls to a file.
+
+[Continue to type foo.txt ENTER]
+
+Let's examine file foo.txt's content with less.
+
+[Type less foo.txt ENTER]
+
+See that the file foo.txt does indeed contain the error message from the ls command.
+
+[Press q to exit less]
