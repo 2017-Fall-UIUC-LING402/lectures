@@ -1,0 +1,70 @@
+\documentclass{beamer}
+\input{preamble.tex}
+
+
+\title[LING 402]{Tools and Techniques for \\ Speech and Language Processing}
+\author[Week 03 of 16 --- Day 05 of 29]{}
+\institute[shortinst]{University of Illinois at Urbana-Champaign}
+
+\date{Week 03 of 16 --- Day 05 of 29}
+
+\begin{document}
+
+% Specify that no bibliography should be printed
+\bibliographystyle{plainnat}
+
+\frame{\titlepage}
+
+
+\frame {
+\frametitle{Quiz (\homedir15 minutes)}
+
+}
+
+\frame{
+\frametitle{Practice time}
+
+	The following exercise expects you to:
+	\begin{itemize}
+		\item Write a bash script that reads from stdin (w/o \texttt{read} command)
+		\item Make use of bash variables and expansions
+		\item Get the output of a single python command from the command line (w/o opening the python interpreter)
+	\end{itemize}
+
+}
+
+
+\frame {
+\frametitle{Measuring the size of presidents' vocabularies }
+
+	Write a bash script which accepts text from stdin, and then uses shell commands and variables as well as python commands to:
+	
+	\begin{itemize}
+		\item remove punctuation (,.;:) from the text
+		\item output the total number of \textbf{types} (unique tokens) in the text
+		\item output the total number of \textbf{tokens} in the text
+		\item output \underline{as a float} the \textbf{lexical diversity} (types/tokens) of the text 
+	\end{itemize}
+
+	Then, use your script to find the types, tokens, and lexical diversity of three U.S. presidential inaugural addresses of your choice from:
+
+	\ \\ 
+
+	\url{/usr/share/nltk_data/corpora/inaugural/}
+
+}
+
+
+\frame {
+\frametitle{Measuring the size of presidents' vocabularies }
+
+	What does your numerical value of lexical diversity mean?
+	
+	\ \\ 
+	
+	What are some ways you might improve on preprocessing the text before calculating lexical diversity?
+	Just think about what you would do, even if you don't know how to do it yet.
+
+}
+
+\end{document}
