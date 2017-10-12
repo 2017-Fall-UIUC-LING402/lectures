@@ -1,0 +1,57 @@
+\documentclass{beamer}
+\input{preamble.tex}
+
+
+\title[LING 402]{Tools and Techniques for \\ Speech and Language Processing}
+\author[Week 07 of 16 --- Day 14 of 29]{}
+\institute[shortinst]{University of Illinois at Urbana-Champaign}
+
+\date{Week 07 of 16 --- Day 14 of 29}
+
+\begin{document}
+
+% Specify that no bibliography should be printed
+\bibliographystyle{plainnat}
+
+\frame{\titlepage}
+
+
+\frame {
+\frametitle{Quiz (\homedir10 minutes)}
+
+}
+
+\frame{
+\frametitle{hw08 housekeeping}
+
+NB that some lines of code in the scaffolding will need to be replaced:
+
+\begin{itemize}
+\item \texttt{pass}
+\item \texttt{if True == False}
+\item \texttt{while True == False}
+\end{itemize}
+
+When you write your replacement, you should only need a single line of code.
+}
+
+\frame{
+\frametitle{hw08 concepts}
+Brief overview of \textbf{classes} and their \textbf{instantiation} as \textbf{objects}
+}
+
+\frame {
+\frametitle{Play time}
+
+Implement a simple card game in which two players draw a card from a deck and the highest card wins.
+\begin{itemize}
+\item Implement a \textbf{Card} class which has \textbf{value} and \textbf{suit} attributes.
+\item Implement a \textbf{ShuffledDeck} class which instantiates 52 Card of unique suit and value combinations.
+\item The ShuffledDeck class must also have a \texttt{draw} function, which returns the top Card.
+\item Print out the value and suit of each player's drawn Card with the value as a string (\texttt{Q, J, 10, 9,} etc.) and the suit represented by the \textbf{card suit unicode codepoints}.
+\item Print which player wins else print that it was a draw (\textit{how can you compare the card values?}).
+\end{itemize}
+
+}
+
+\end{document}
