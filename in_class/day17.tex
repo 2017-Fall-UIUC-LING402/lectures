@@ -1,0 +1,47 @@
+\documentclass{beamer}
+\input{preamble.tex}
+
+
+\title[LING 402]{Tools and Techniques for \\ Speech and Language Processing}
+\author[Week 09 of 16 --- Day 17 of 29]{}
+\institute[shortinst]{University of Illinois at Urbana-Champaign}
+
+\date{Week 09 of 16 --- Day 17 of 29}
+
+\begin{document}
+
+% Specify that no bibliography should be printed
+\bibliographystyle{plainnat}
+
+\frame{\titlepage}
+
+
+\frame {
+\frametitle{Quiz (\homedir10 minutes)}
+
+}
+
+\frame {
+\frametitle{Go over hw09}
+
+}
+
+\frame{
+\frametitle{Questions on hw10}
+
+}
+
+\frame{
+\frametitle{Finding synonyms with nltk}
+\begin{itemize}
+\item Get the raw text of 'English-Latin1' from nltk.corpus.udhr.
+\item Split the raw text into sentences using the split() function.
+\item Tokenize each sentence using nltk.word\_tokenize().
+\item For each token, find a synonym - i.e. the name of the first lemma of the first synset in wordnet of which the token is a member.
+\item Print an output string for each sentence, where each token has been replaced by a synonym.
+\item If no synonym can be found, the original token should be printed.
+\end{itemize}
+You will find it helpful to look through \url{http://www.nltk.org/_modules/nltk/corpus/reader/wordnet.html}
+}
+
+\end{document}
